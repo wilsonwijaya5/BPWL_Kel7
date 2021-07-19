@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 16 Jul 2021 pada 10.08
+-- Waktu pembuatan: 19 Jul 2021 pada 10.23
 -- Versi server: 10.4.19-MariaDB
 -- Versi PHP: 8.0.7
 
@@ -47,7 +47,7 @@ CREATE TABLE `furniture` (
   `jenis_furniture` varchar(20) NOT NULL,
   `bahan_furniture` varchar(20) NOT NULL,
   `stok_furniture` varchar(5) NOT NULL,
-  `harga_furniture` varchar(15) NOT NULL
+  `harga_furniture` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -74,7 +74,7 @@ CREATE TABLE `pembelian` (
   `kode_customer` varchar(6) NOT NULL,
   `tgl_beli` varchar(20) NOT NULL,
   `jml_beli` varchar(5) NOT NULL,
-  `harga_beli` varchar(15) NOT NULL
+  `harga_beli` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -114,7 +114,7 @@ CREATE TABLE `penjualan` (
   `kode_supplier` varchar(6) NOT NULL,
   `tgl_jual` varchar(20) NOT NULL,
   `jml_jual` varchar(5) NOT NULL,
-  `harga_jual` varchar(15) NOT NULL
+  `harga_jual` double NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -215,8 +215,8 @@ ALTER TABLE `pembelian`
 -- Ketidakleluasaan untuk tabel `penjualan`
 --
 ALTER TABLE `penjualan`
-  ADD CONSTRAINT `FK_kode_furniture2` FOREIGN KEY (`kode_furniture`) REFERENCES `furniture` (`kode_furniture`),
-  ADD CONSTRAINT `FK_kode_supplier` FOREIGN KEY (`kode_supplier`) REFERENCES `supplier` (`kode_supplier`);
+  ADD CONSTRAINT `FK_kode_furniture2` FOREIGN KEY (`kode_furniture`) REFERENCES `furniture` (`kode_furniture`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `FK_kode_supplier` FOREIGN KEY (`kode_supplier`) REFERENCES `supplier` (`kode_supplier`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
