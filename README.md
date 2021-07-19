@@ -1,6 +1,7 @@
 Project BPWL 
 
-Tema : Furniture 
+Tema : UMKM Furniture
+Judul : Aplikasi Berbasis Web Toko Furniture Rimakoci
 Kelompok 7 : 
 1. Cici Holanda Putri 
 2. Fadillah Farhan 
