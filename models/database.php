@@ -155,8 +155,8 @@ class database
     function update_furniture($kode_furniture, $nama_furniture, $jenis_furniture, $bahan_furniture, $stok_furniture, $harga_furniture)
     {
         mysqli_query(mysqli_connect($this->host, $this->username, $this->pass, $this->db), "UPDATE furniture
-            SET kode_furniture=$kode_furniture, nama_furniture = '$nama_furniture', jenis_furniture = '$jenis_furniture' 
-            ,bahan_furniture = '$bahan_furniture', stok_furniture = '$stok_furniture', harga_furniture = '$harga_furniture' WHERE kode_furniture = '$kode_furniture'");
+            SET kode_furniture='$kode_furniture', nama_furniture = '$nama_furniture', jenis_furniture = '$jenis_furniture',
+            bahan_furniture = '$bahan_furniture', stok_furniture = '$stok_furniture', harga_furniture = '$harga_furniture' WHERE kode_furniture = '$kode_furniture'");
     }
 
     #Supplier
@@ -211,7 +211,19 @@ class database
     {
         $data = mysqli_query(
             mysqli_connect($this->host, $this->username, $this->pass, $this->db),
-            "SELECT kode_beli, f.kode_furniture, c.kode_customer, tgl_beli, jml_beli, harga_beli from pembelian, furniture f, customer c"
+            "SELECT * from pembelian"
+        );
+        while ($d = mysqli_fetch_array($data)) {
+            $hasil[] = $d;
+        }
+        return $hasil;
+    }
+
+    function tampil_data_pembelian_user($kode_customer)
+    {
+        $data = mysqli_query(
+            mysqli_connect($this->host, $this->username, $this->pass, $this->db),
+            "SELECT * from pembelian where kode_customer='$kode_customer'"
         );
         while ($d = mysqli_fetch_array($data)) {
             $hasil[] = $d;
@@ -258,7 +270,7 @@ class database
     {
         $data = mysqli_query(
             mysqli_connect($this->host, $this->username, $this->pass, $this->db),
-            "SELECT kode_jual, f.kode_furniture, s.kode_supplier, tgl_jual, jml_jual, harga_jual from penjualan, furniture f, supplier s"
+            "SELECT * from penjualan"
         );
         while ($d = mysqli_fetch_array($data)) {
             $hasil[] = $d;

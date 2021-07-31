@@ -62,17 +62,14 @@ elseif ($_GET['aksi'] == "tambah_furniture") {
     }
 } elseif ($_GET['aksi'] == "delete_furniture") {
     $db->delete_furniture($_GET['kode_furniture']);
-    if ($_SESSION['akses'] = 'user') {
-        header("location:../views/userpage.php");
-    } elseif ($_SESSION['akses'] = 'admin') {
-        header("location:../views/adminpage.php");
+    $db->update_furniture($_POST['kode_furniture'], $_POST['nama_furniture'], $_POST['jenis_furniture'], $_POST['bahan_furniture'], $_POST['stok_furniture'], $_POST['harga_furniture']);
+    if ($_SESSION['akses'] = 'admin') {
+        header("location:../views/furniture_admin.php");
     }
 } elseif ($_GET['aksi'] == "update_furniture") {
     $db->update_furniture($_POST['kode_furniture'], $_POST['nama_furniture'], $_POST['jenis_furniture'], $_POST['bahan_furniture'], $_POST['stok_furniture'], $_POST['harga_furniture']);
-    if ($_SESSION['akses'] = 'user') {
-        header("location:../views/userpage.php");
-    } elseif ($_SESSION['akses'] = 'admin') {
-        header("location:../views/adminpage.php");
+    if ($_SESSION['akses'] = 'admin') {
+        header("location:../views/furniture_admin.php");
     }
 }
 #Supplier

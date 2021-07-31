@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Sidebar 07</title>
+  <title>Admin | Karawaci Furniture</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -16,22 +16,22 @@
 
   <div class="wrapper d-flex align-items-stretch">
     <nav id="sidebar" class="active">
-      <h1><a href="index.html" class="logo">M.</a></h1>
+      <h1><a href="adminpage.php" class="logo">KW</a></h1>
       <ul class="list-unstyled components mb-5">
         <li class="active">
-          <a href="#"><span class="fa fa-home"></span> Home</a>
+          <a href="adminpage.php"> Home </a>
         </li>
         <li>
-          <a href="#"><span class="fa fa-user"></span> About</a>
+          <a href="akun.php"> Akun </a>
         </li>
         <li>
-          <a href="#"><span class="fa fa-sticky-note"></span> Blog</a>
+          <a href="furniture_admin.php"> Furniture </a>
         </li>
         <li>
-          <a href="#"><span class="fa fa-cogs"></span> Services</a>
+          <a href="customer.php"> Customer </a>
         </li>
         <li>
-          <a href="#"><span class="fa fa-paper-plane"></span> Contacts</a>
+          <a href="pembelian_admin.php"> Pembelian </a>
         </li>
       </ul>
 
@@ -61,25 +61,25 @@
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="nav navbar-nav ml-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="#">Home</a>
+                <a class="nav-link" href="adminpage.php">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link" href="about_admin.php">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Portfolio</a>
+                <a class="nav-link" href="contact_admin.php">Contact</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Contact</a>
+                <a class="nav-link" href="../controllers/proses.php?aksi=logout">Log Out</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
 
-      <h2 class="mb-4">Sidebar #07</h2>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <h2 class="mb-3">Karawaci Furniture</h2>
+      <h4>Selamat Datang di Karawaci Furniture</h4>
+      <p>Karawaci Furniture merupakan tempat yang menjual berbagai furniture dengan harga terjangkau, disini kami menyediakan barang-barang furniture seperti, lemari, meja, kursi, sofa, cermin, rak buku, dan masih banyak lagi. Silahkan cek halaman Furniture untuk dapat melihat berbagai furniture yang kami sediakan.</p>
     </div>
   </div>
 
